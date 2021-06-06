@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youchef/screens/categories_screen.dart';
 
 void main() => runApp(YouChefApp());
 
@@ -11,26 +12,7 @@ class YouChefApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('You Chef'),
-      ),
-      body: Center(
-        child: Text('Welcome!'),
-      ),
+      home: CategoriesScreen(),
     );
   }
 }
