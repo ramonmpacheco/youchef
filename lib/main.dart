@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:youchef/screens/categories_meals_screen.dart';
 import 'package:youchef/screens/categories_screen.dart';
+import 'package:youchef/utils/app_routes.dart';
 
 void main() => runApp(YouChefApp());
 
@@ -22,9 +23,9 @@ class YouChefApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesScreen(),
       routes: {
-        '/categories-meals': (ctx) => CategoriesMealsScreen(),
+        AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
       },
     );
   }

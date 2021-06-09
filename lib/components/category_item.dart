@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youchef/models/category.dart';
-import '../screens/categories_meals_screen.dart';
+import 'package:youchef/utils/app_routes.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
@@ -9,7 +9,7 @@ class CategoryItem extends StatelessWidget {
 
   void _onSelectCategory(BuildContext context) {
     Navigator.of(context).pushNamed(
-      '/categories-meals',
+      AppRoutes.CATEGORIES_MEALS,
       arguments: category,
     );
   }
