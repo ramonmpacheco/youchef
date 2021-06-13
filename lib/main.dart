@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youchef/components/settings_screen.dart';
 import 'package:youchef/screens/categories_meals_screen.dart';
 import 'package:youchef/screens/categories_screen.dart';
 import 'package:youchef/screens/meal_detail_screen.dart';
@@ -29,6 +30,7 @@ class YouChefApp extends StatelessWidget {
         AppRoutes.HOME: (ctx) => TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
+        AppRoutes.SETTINGS: (ctx) => SettingsScreen(),
       },
     );
   }
