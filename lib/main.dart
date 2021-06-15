@@ -18,10 +18,13 @@ class YouChefApp extends StatefulWidget {
 }
 
 class _YouChefAppState extends State<YouChefApp> {
+  Settings settings = Settings();
   List<Meal> _availableMeals = DUMMY_MEALS;
 
   void _filterMeals(Settings settings) {
     setState(() {
+      this.settings = settings;
+
       _availableMeals = DUMMY_MEALS.where((meal) {
         final filterGlutem = settings.isGlutenFree && !meal.isGlutenFree;
         final filterLactose = settings.isLactoseFree && !meal.isLactoseFree;
@@ -56,7 +59,7 @@ class _YouChefAppState extends State<YouChefApp> {
         AppRoutes.CATEGORIES_MEALS: (ctx) =>
             CategoriesMealsScreen(_availableMeals),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
-        AppRoutes.SETTINGS: (ctx) => SettingsScreen(_filterMeals),
+        AppRoutes.SETTINGS: (ctx) => SettingsScreen(_filterMeals, settings),
       },
     );
   }
